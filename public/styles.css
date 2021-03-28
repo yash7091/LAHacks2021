@@ -1,0 +1,337 @@
+body{
+  background-color:#0D1842 !important;
+  background-size:cover;
+  background-position:right;
+  font-family: 'Quicksand', sans-serif !important;
+}
+.link-accent{
+  color:#F25757 !important;
+}
+.link-accent:hover{
+  color:#EF2E2E;
+  text-decoration:none;
+}
+::selection{
+  background:#06a6b0;
+  color:#f1faee;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.question_section {
+  background:none;
+  background-size:cover;
+  background-position:right;
+  color:#F1FAEE;
+  padding: 0% 22%;
+  font-size: 1.1rem;
+  -webkit-touch-callout: none; /* iOS Safari */ 
+    -webkit-user-select: none; /* Safari */ 
+     -khtml-user-select: none; /* Konqueror HTML */ 
+       -moz-user-select: none; /* Firefox */ 
+        -ms-user-select: none; /* Internet Explorer/Edge */ 
+            user-select: none; /* Non-prefixed version, currently 
+                                  supported by Chrome and Opera */
+}
+.question-container{
+  background-color:#112059;
+  padding:10px;
+  border-radius:8px;
+  padding-bottom:50px;
+}
+
+.option {
+  display: grid;
+  grid-template-columns:auto auto;
+  justify-content:left;
+  align-items:center;
+  border: 0;
+  text-align: left;
+  padding: 8px 20px;
+  border:2px solid rgba(69, 123, 157,0.5);
+  border-radius: 10px; 
+}
+
+.option span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border:2px solid rgba(69, 123, 157,0.5);
+  width: 30px;
+  height: 30px;
+  border-radius:50%;
+  text-align: center;
+  margin-right: 20px;
+}
+
+.question{
+  text-align:justify;
+  font-size:1rem;
+}
+label {
+  padding: 1px 0;
+  width: 100%;
+  font-size:1rem;
+}
+input[type="radio"] {
+  display: none;
+}
+input[type="radio"]:checked ~ .option span {
+  background-color: #1A8BDB;
+  color: #fff;
+  box-shadow: none;
+  border:0;
+}
+.carousel-inner {
+  overflow-y: scroll;
+  padding: 2%;
+  margin-bottom: 1%;
+}
+.carousel-control {
+  display: block;
+  padding: 10px;
+  height: 50px;
+  width:90px;
+  display: inline-block;
+  color: #fff;
+  background-color: #1A8BDB;
+  transition: 0.1s;
+  text-align:center;
+}
+.carousel-control:hover {
+  background-color: #1573B7;
+  color: #e1f4f3;
+  text-decoration:none;
+}
+
+.questionToggles{
+  display:flex;
+  overflow-x:scroll;
+  scroll-behavior:smooth;
+}
+.questionToggles button{
+  background-color:#457B9D;
+  border:0;
+  height:27px;
+  width:27px;
+  margin:8px 10px;
+  border-radius:50%;
+  color:#fff;
+  font-size:0.8rem;
+}
+.questionToggles button:focus{
+  outline:none;
+}
+
+.next{
+ position:fixed;
+  bottom:0;
+  right:0;
+  border-radius:  10px 0 0 0;
+}
+.prev{
+  position:fixed;
+  bottom:0;
+  left:0;
+  border-radius: 0 10px 0 0;
+}
+.submit-btn{
+  background:none;
+  border:0;
+  color:#06d6a0;
+  padding:27px 25px;
+  font-size:1.1rem;
+  font-weight:bold;
+  float:right;
+}
+.submit-btn:focus{
+  outline:none;
+}
+
+@media(max-width:600px){
+  .question_section{
+    padding: 0% 5%;
+  }
+}
+@media(min-width:800px){
+  .question-container{
+  /* border:2px solid rgba(69, 123, 157,0.2); */
+  border-radius: 10px; 
+  /* box-shadow: 2px 2px 20px #457B9D; */
+  padding-bottom:0;
+}
+}
+
+/* Landing Page */
+.landing-page{
+  padding:10px 0 150px 0;
+  background-color:#0D1842;
+  min-height:100vh;
+  background-size:cover;
+  background-position:center;
+  font-family: 'Quicksand', sans-serif !important;
+}
+h3{
+  text-align:justify;
+  color:#F4E1EA;
+  padding-top:20px;
+  font-size:1.4rem;
+  text-align-last:center;
+}
+.landing-page input, .landing-page .score{
+  display:block;
+  background:none;
+  border:2px solid rgba(69, 123, 157,0.7);
+  border-bottom:0;
+  padding:10px 20px;
+  caret-color:#06d6a0;
+  color:#f1faee;
+  text-align:center;
+  width:500px;
+  margin:auto;
+}
+.landing-page input:last-child, .landing-page .score:last-child{
+  border-bottom:2px solid rgba(69, 123, 157,0.7);
+}
+.landing-page input:first-child, .landing-page .score:first-child{
+  border-radius:8px 8px 0 0;
+}
+
+.landing-page .score:last-child{
+ border-radius:0 0 8px 8px;
+}
+
+.landing-page ::placeholder{
+  color: rgba(69, 123, 157,0.7);
+}
+.landing-page input:focus{
+  outline:none;
+  border:2px solid #6DB8EE;
+}
+.landing-page textarea{
+   display:block;
+  background:none;
+  border:2px solid rgba(69, 123, 157,0.7);
+  border-bottom:0;
+  padding:10px 20px;
+  caret-color:#06d6a0;
+  color:#f1faee;
+  text-align:center;
+  width:500px;
+}
+.landing-page textarea:focus{
+  outline:none;
+  border:2px solid #6DB8EE;
+}
+.landing-page button{
+  border:0;
+  color: #eadeda;
+  background-color: #1A8BDB;
+  width:500px;
+  padding:10px 20px;
+  border-radius:0 0 8px 8px;
+}
+.landing-page button:focus{
+  outline:none;
+}
+.landing-page select{
+  width:500px;
+  background-color: #0d1842;
+  border:2px solid rgba(69, 123, 157,0.7);
+  border-bottom:0;
+  padding:10px 20px;
+  color:#f1faee;
+  text-align-last:center;
+}
+.landing-page select option{
+  text-align-last:center;
+}
+.landing-page select:focus{
+  outline:none;
+  border:2px solid #6DB8EE;
+}
+
+.brand{
+  position:fixed;
+  top:0;
+  height:120px;
+  width:100%;
+  background-color: #122464;
+  color:#fff;
+  text-align:center;
+  font-weight:bold;
+  font-size:1.6rem;
+  padding:10px 0;
+  /* border-radius:0 0 20px 20px; */
+}
+.brand span{
+  margin-left:10px;
+}
+@media(max-width:600px){
+  .landing-page{
+  background-position:right;
+  }
+  .landing-page input, .landing-page .score{
+    width:300px;
+  }
+  .landing-page button{
+    width:300px;
+  }
+  .landing-page select{
+  width:300px;
+  }
+  .landing-page textarea{
+  width:300px;
+  }
+}
+@media(max-height:500px){
+  .brand{
+    display:none;
+  }
+}
+/* Remove increment decrement in input type number */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+/* ScrollBar */
+::-webkit-scrollbar {
+  width:2px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: none;
+  background-clip: content-box;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background-color: none;
+    border: 7px solid transparent;
+    border-radius: 9px;
+    background-clip: content-box;
+}
+
+/* Popover */
+.pop-btn{
+  position:fixed;
+  bottom:0;
+  right:50%;
+  height:30px;
+  width:50px;
+  transform:translateX(25px);
+  border:0;
+  background-color:#F25757;
+  color:#f1faee;
+  border-radius:25px 25px 0 0;
+  padding-top:5px;
+  padding-bottom:0;
+}
+.pop-btn:focus{
+  outline:none;
+}
